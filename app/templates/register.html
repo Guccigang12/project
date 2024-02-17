@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зареєструватися</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #4CAF50, #2196F3);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            font-size: 30px;
+        }
+        h1, p {
+            margin-bottom: 30px;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            margin-bottom: 10px;
+            padding: 8px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #ffffff;
+            color: black;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Register</h1>
+    <form action="{{ url_for('register') }}" method="POST">
+        <label for="username">Ім'я:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="email">Пошта:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="task">Завдання:</label><br>
+        <textarea id="task" name="task"></textarea><br>
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
